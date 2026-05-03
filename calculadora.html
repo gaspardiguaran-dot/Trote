@@ -1,79 +1,92 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="pt-br">
     <head>
-        <meta charset="UTF-8"/>
-        <title> Trote Solidário </title>
+        <meta charset="utf-8">
+        <title> Cronograma Trote 2026</title>
         <link rel="stylesheet" href="styles.css">
         <script src="scripts.js"></script>
     </head>
+
     <body>
-       <nav class="menu-principal">
-        <div class="menu-container">
-            <a href="index.html" class="logo"> Trote 2026 </a>
-            <ul class="lista">
-                <li> <a href="index.html"> Início </a> </li> 
-                <li> <a href="introducao.html"> Introdução </a></li>
-                <li> <a href="formato.html"> Formato </a> </li> 
-                <li> <a href="equipes.html"> Equipes </a> </li>
-                <li> <a href="provas.html"> Provas & Metas </a> </li> 
-                <li> <a href="integracao.html"> Integração </a> </li>
-                <li> <a href="cronograma.html"> Cronograma </a> </li> 
-                <li> <a href="calculadora.html"> Calculadora </a> </li>
-            </ul>    
-        </div> 
-       </nav>
-     
-       <main class="principal">
-          <section>
-            <h3>🧮 Simulador de Pontos - Itens Avulsos</h3>
-            <div class="form-grid">
-                <div class="form-group">
-                    <label>Arroz (5kg)</label>
-                    <input type="number" value="0" min="0" id="qtdeArroz"/>
-                </div>
-                <div class="form-group">
-                    <label>Feijão (2kg)</label>
-                    <input type="number" value="0" min="0" id="qtdeFeijao"/>
-                </div>
-                <div class="form-group">
-                    <label>Óleo (1L)</label>
-                    <input type="number" value="0" min="0" id="qtdeOleo"/>
-                </div>
-                <div class="form-group">
-                    <label>Macarrão (500g)</label>
-                    <input type="number" value="0" min="0" id="qtdeMacarrao"/>
-                </div>
+        <nav class="menu-principal">
+            <div class="menu-container">
+                <a href="index.html" class="logo"> Trote 2026 </a>
+                <ul class="lista-limpa">
+                    <li> <a href= "index.html"> Início </a> </li> 
+                    <li> <a href= "introducao.html"> Introdução </a> </li>
+                    <li> <a href="formato.html"> Formato </a> </li>
+                    <li> <a href="equipes.html"> Equipes </a> </li>
+                    <li> <a href="provas.html"> Provas & Metas </a> </li>
+                    <li> <a href="integracao.html"> Integração </a> </li>
+                    <li> <a href="cronograma.html"> Cronograma </a> </li>
+                    <li> <a href="calculadora.html"> Calculadora </a> </li>
+                </ul>
             </div>
-          </section>
+        </nav>  
 
-          <section>
-              <h3>Simulador de Pontos - Kit Alimentação</h3>
-              <div class="form-group">
-                  <label>Escolha a cor do time</label>
-                  <select id="cor">
-                      <option value="verde">Verde</option>
-                      <option value="vermelho">Vermelho</option>
-                      <option value="laranja">Laranja</option>
-                      <option value="amarelo">Amarelo</option>
-                      <option value="cinza">Cinza</option>
-                      <option value="marron">Marron</option>
-                      <option value="preto">Preto</option>
-                      <option value="roxo">Roxo</option>
-                  </select>
-              </div>
-          </section>
+        <main class="principal">
+            <section>
+                <h3>🧮 Simulador de Pontos - Itens Avulsos</h3>
+                <div>
+                    <div class="form-group">
+                        <!--rótulo de caixa de texto-->
+                        <label>Arroz (5kg)</label>
+                        <input type="number" value="0" min="0" id="qtdeArroz"/>
+                    </div>
 
-          <div class="actions">
-              <button onclick="calcular()">Calcular Total</button>
-              <div id="result" class="resultado">
-                  Pontuação Total: 0 pontos
-              </div>
-          </div>
-       </main>    
-        <footer>
-            <p>Coordenação Trote Solidário 2026: trotesolidario@facef.br</p>
-            <p>Uni-FACEF - Centro Universitário Municipal de Franca</p>
-        </footer> 
-       
+                    <div class="form-group">
+                        <label>Feijão (2kg)</label>
+                        <input type="number" value="0" min="0" id="qtdeFeijao"/>
+                    </div>
+
+                     <div class="form-group">
+                        <!--2 pontos-->
+                        <label>Óleo (1L)</label> 
+                        <input type="number" value="0" min="0" id="qtdeOleo"/>
+                    </div>
+
+                     <div class="form-group">
+                         <!--4 pontos-->
+                        <label>Macarrão (500g)</label>
+                        <input type="number" value="0" min="0" id="qtdeMacarrao"/>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h3>Simulador de Pontos - Metas Batidas</h3>
+                <div class="form-group">
+                    <label> Escolha a cor do time</label>
+                    <select id="cor">
+                        <option value="verde"> Verde </option>
+                        <option value="vermelho"> Vermelho </option>
+                        <option value="laranja"> Laranja </option>
+                        <option value="amarelo"> Amarelo </option>
+                        <option value="cinza"> Cinza </option>
+                        <option value="marron"> Marron </option>
+                        <option value="preto"> Preto </option>
+                        <option value="roxo"> Roxo </option>
+                    </select>
+                     <label> Kits de Alimentação</label>
+                    <input type="number" value="0" min="0" id="quantKit"/>
+                </div>
+                <div class="form-group">
+                    <label> Quant. de Suplementos</label>
+                     <input type="number" value="0" min="0" id="quantSuplemento"/>
+                </div>
+                
+            </section>
+            <button onclick="calcular()">Calcular Total</button>
+                <div id="result" class="resultado">
+                    Pontuação Total: 0 pontos
+                </div>
+                
+
+        </main>
+
+            <footer class="footer">
+                <p>Coordenação Trote Solidário 2026: trotesolidario@facef.br</p>
+                <p>Uni-FACEF - Centro Universitário Municipal de Franca</p>
+            </footer>
     </body>
 </html>
